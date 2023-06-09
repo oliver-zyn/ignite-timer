@@ -1,11 +1,11 @@
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
+  flex: 1;
+  padding: 3.5rem;
+
   display: flex;
   flex-direction: column;
-  flex: 1;
-
-  padding: 3.5rem;
 
   h1 {
     font-size: 1.5rem;
@@ -17,14 +17,20 @@ export const HistoryList = styled.div`
   flex: 1;
   overflow: auto;
   margin-top: 2rem;
+  max-height: 500px;
 
   table {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
 
+    thead {
+      position: sticky;
+      top: 0;
+    }
+
     th {
-      background: ${(props) => props.theme['gray-600']};
+      background-color: ${(props) => props.theme['gray-600']};
       padding: 1rem;
       text-align: left;
       color: ${(props) => props.theme['gray-100']};
@@ -43,7 +49,7 @@ export const HistoryList = styled.div`
     }
 
     td {
-      background: ${(props) => props.theme['gray-700']};
+      background-color: ${(props) => props.theme['gray-700']};
       border-top: 4px solid ${(props) => props.theme['gray-800']};
       padding: 1rem;
       font-size: 0.875rem;
@@ -68,7 +74,7 @@ const STATUS_COLORS = {
 } as const
 
 interface StatusProps {
-  statusColor: keyof typeof STATUS_COLORS
+  statuscolor: keyof typeof STATUS_COLORS
 }
 
 export const Status = styled.span<StatusProps>`
@@ -81,6 +87,7 @@ export const Status = styled.span<StatusProps>`
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 9999px;
-    background: ${(props) => props.theme[STATUS_COLORS[props.statusColor]]};
+    background: ${(props) =>
+      props.theme[STATUS_COLORS[props.statuscolor]] || `white`};
   }
 `
