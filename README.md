@@ -34,7 +34,7 @@ Aplicação em produção: https://ignite-timer-oliverzyn.netlify.app
 
 ## 🖋️ Layout
 
-O layout da aplicação foi =disponibilizado pela RocketSeat para alunos do Ignite. Você pode vizualizá-lo através <a href="https://www.figma.com/community/file/1127351821076435124">desse link</a>
+O layout da aplicação foi disponibilizado pela RocketSeat para alunos do Ignite. Você pode vizualizá-lo através <a href="https://www.figma.com/community/file/1127351821076435124">desse link</a>
 
 ## ⚙️ Executando o projeto
 
